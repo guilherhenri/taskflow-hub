@@ -2,6 +2,7 @@ import { Provider as ReduxProvider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from 'react-router'
 
 import { Dashboard } from './components/layouts/dashboard'
+import { Home } from './pages/home'
 import { store } from './store'
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Dashboard>
           <Routes>
-            <Route index element={<h1>Home</h1>} />
+            <Route index element={<Home />} />
             <Route path="/users" element={<h1>Users</h1>} />
           </Routes>
         </Dashboard>
