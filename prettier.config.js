@@ -5,7 +5,7 @@ import * as tailwindcssPlugin from 'prettier-plugin-tailwindcss'
 /** @typedef {import('prettier').Config} PrettierConfig */
 
 /** @type { PrettierConfig } */
-export const config = {
+export default {
   plugins: [tailwindcssPlugin, classnamesPlugin, mergePlugin],
   printWidth: 80,
   tabWidth: 2,
