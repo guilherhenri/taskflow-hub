@@ -65,6 +65,12 @@ export default defineConfig({
     // },
   ],
 
+  webServer: {
+    command: 'pnpm dev', // Replace with your app's start command
+    url: 'http://localhost:5173', // Replace with your app's URL
+    reuseExistingServer: !process.env.CI,
+  },
+
   testMatch: '*.e2e-spec.ts',
 
   /* Run your local dev server before starting the tests */
