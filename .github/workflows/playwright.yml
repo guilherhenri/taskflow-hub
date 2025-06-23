@@ -15,10 +15,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-          fetch-depth: 0
+        fetch-depth: 0
 
-     - name: Install pnpm
-        run: npm install -g pnpm@10.12.1
+    - name: Install pnpm
+      run: npm install -g pnpm@10.12.1
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -27,7 +27,7 @@ jobs:
         cache: "pnpm"
 
     - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      run: pnpm install --frozen-lockfile
 
     - name: Install Playwright Browsers
       run: pnpm exec playwright install --with-deps
