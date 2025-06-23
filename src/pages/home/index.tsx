@@ -22,8 +22,11 @@ export function Home() {
 
         <CreateTask />
       </div>
-      <Separator />
-      <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2 xl:grid-cols-3">
+      <Separator aria-label="separator" />
+      <div
+        className="flex flex-col gap-6 lg:grid lg:grid-cols-2 xl:grid-cols-3"
+        aria-label="list-tasks"
+      >
         {tasks.slice(0, 10).map((task) => (
           <TaskCard key={task.id} {...task} />
         ))}

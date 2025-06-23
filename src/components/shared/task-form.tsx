@@ -15,7 +15,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '../ui/button'
 
 const formSchema = z.object({
-  title: z.string(),
+  title: z.string().min(1),
 })
 export type FormType = z.infer<typeof formSchema>
 
