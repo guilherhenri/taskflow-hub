@@ -15,7 +15,7 @@ interface Task {
   completed: boolean
 }
 
-interface TasksState {
+export interface TasksState {
   list: Array<Task>
   isLoading: boolean
 }
@@ -31,7 +31,7 @@ export const loadTasks = createAsyncThunk('load/tasks', async () => {
   return response
 })
 
-const tasksSlice = createSlice({
+export const tasksSlice = createSlice({
   name: 'tasks',
   initialState,
   reducers: {
