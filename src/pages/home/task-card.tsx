@@ -33,6 +33,7 @@ export function TaskCard({ id, title, completed }: TaskCardProps) {
         !completed && 'hover:bg-secondary',
       )}
       onClick={handleToggleTask}
+      aria-label="task-card"
     >
       <CardContent>
         <p className={cn('text-lg', completed && 'line-through')}>{title}</p>
